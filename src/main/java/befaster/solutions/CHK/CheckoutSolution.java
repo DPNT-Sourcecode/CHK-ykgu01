@@ -215,8 +215,9 @@ public class CheckoutSolution {
         }
         totalPrices[17] += counter[17] * 50; // R (edit)
 
+        if(counter[18] >= 1)
 
-        totalPrices[18] = counter[18] * 30; // S
+        totalPrices[18] = counter[18] * 20; // S
         totalPrices[19] = counter[19] * 20; // T
         while(counter[20] > 0){
             if(counter[20] > 3)
@@ -245,9 +246,9 @@ public class CheckoutSolution {
             }
         }
         totalPrices[22] = counter[22] * 20; // W
-        totalPrices[23] = counter[23] * 90; // X
-        totalPrices[24] = counter[24] * 10; // Y
-        totalPrices[25] = counter[25] * 50; // Z
+        totalPrices[23] = counter[23] * 17; // X
+        totalPrices[24] = counter[24] * 20; // Y
+        totalPrices[25] = counter[25] * 21; // Z
 
         for(int j = 0; j<26; j++)
         {
@@ -256,3 +257,4 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
