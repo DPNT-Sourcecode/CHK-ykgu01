@@ -8,7 +8,35 @@ public class CheckoutSolution {
         int product = 1;
         String sku = "";
         int totalPrice = 0;
+        if(skus.length() == 1) {
+            switch(skus.charAt(0)) {
+                case 'A':
+
+                        totalPrice += product * 50;
+
+                    break;
+                case 'B':
+                    if(product % 2 == 0)
+                    {
+                        totalPrice = totalPrice + 45*(product/2);
+                    }
+                    else {
+                        totalPrice += product * 30;
+                    }
+                    break;
+                case 'C':
+                    totalPrice += product * 20;
+                    break;
+                case 'D':
+                    totalPrice += product * 15;
+                    break;
+            }
+
+        }
         for(int i = 0; i<skus.length(); i++) {
+            if(skus.charAt(i) != 'A' || skus.charAt(i) != 'B' || skus.charAt(i) != 'C' || skus.charAt(i) != 'D' || Character.isDigit(skus.charAt(i))) {
+                return -1;
+            }
             if(Character.isLetter(skus.charAt(i))) {
                 switch(skus.charAt(i)) {
                     case 'A':
@@ -43,10 +71,8 @@ public class CheckoutSolution {
                 productletter += skus.charAt(i);
                 product = Integer.parseInt(productletter);
             }
-            if(skus.charAt(i) != 'A' || skus.charAt(i) != 'B' || skus.charAt(i) != 'C' || skus.charAt(i) != 'D' || Character.isDigit(skus.charAt(i))) {
-                return -1;
-            }
         }
         return totalPrice;
     }
 }
+
