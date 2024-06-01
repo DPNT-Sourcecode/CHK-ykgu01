@@ -197,7 +197,6 @@ public class CheckoutSolution {
                 counter[15] = 0;
             }
         }
-        totalPrices[16] = counter[16] * 30; // Q (edit)
         while(counter[16] > 0){
             while(counter[17] >= 3)
             {
@@ -219,7 +218,6 @@ public class CheckoutSolution {
 
         totalPrices[18] = counter[18] * 30; // S
         totalPrices[19] = counter[19] * 20; // T
-        totalPrices[20] = counter[20] * 40; // U (edit)
         while(counter[20] > 0){
             if(counter[20] >= 3)
             {
@@ -231,7 +229,6 @@ public class CheckoutSolution {
                 counter[20] = 0;
             }
         }
-        totalPrices[21] = counter[21] * 50; // V (edit)
         while(counter[21] > 0)
         {
             if(counter[21] >= 3){
@@ -259,4 +256,5 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
