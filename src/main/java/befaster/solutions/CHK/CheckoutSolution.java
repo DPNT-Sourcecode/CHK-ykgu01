@@ -9,6 +9,7 @@ public class CheckoutSolution {
         String sku = "";
         int totalPrice = 0;
         for(int i = 0; i<skus.length(); i++) {
+            if(Character.isLetter(skus.charAt(i))) {}
             if(!Character.isLetter(skus.charAt(i))) {
                 switch(skus.charAt(i)) {
                     case 'A':
@@ -37,18 +38,13 @@ public class CheckoutSolution {
                         break;
                 }
                 product = 1;
+                productletter = "";
             }
             else {
                 productletter += skus.charAt(i);
                 product = Integer.parseInt(productletter);
             }
         }
+        return totalPrice;
     }
 }
-
-
-
-
-
-
-
