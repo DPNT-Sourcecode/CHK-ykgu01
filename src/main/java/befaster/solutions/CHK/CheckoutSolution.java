@@ -43,10 +43,6 @@ public class CheckoutSolution {
                 productletter += skus.charAt(i);
                 product = Integer.parseInt(productletter);
             }
-            if(skus.length() == 1)
-            {
-                break;
-            }
             if(skus.charAt(i) != 'A' || skus.charAt(i) != 'B' || skus.charAt(i) != 'C' || skus.charAt(i) != 'D' || Character.isDigit(skus.charAt(i))) {
                 return -1;
             }
@@ -54,6 +50,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
