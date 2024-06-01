@@ -5,8 +5,8 @@ import befaster.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
     public Integer checkout(String skus) {
         int totalPrice = 0;
-        int[] counter = new int[4];
-        int[] totalPrices = new int[4];
+        int[] counter = {0, 0, 0, 0};
+        int[] totalPrices = {0, 0, 0, 0};
         for(int i = 0; i<skus.length(); i++)
         {
             if(skus.isEmpty())
@@ -36,7 +36,7 @@ public class CheckoutSolution {
             }
         }
         while(counter[0] != 0){
-        if(counter[0] > 3) {
+        if(counter[0] >= 3) {
             totalPrices[0] = totalPrices[0] + 130;
             counter[0] = counter[0] - 3;
         }
@@ -46,7 +46,7 @@ public class CheckoutSolution {
         }
         }
         while(counter[1] != 0){
-            if(counter[1] > 2){
+            if(counter[1] >= 2){
                 totalPrices[1] = totalPrices[1] + 45;
                 counter[1] = counter[1] - 2;
             }
@@ -64,12 +64,3 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
-
-
-
-
-
-
-
-
-
