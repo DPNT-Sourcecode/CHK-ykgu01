@@ -4,6 +4,7 @@ import befaster.runner.SolutionNotImplementedException;
 
 public class CheckoutSolution {
     public Integer checkout(String skus) {
+        String productletter = "";
         int product = 1;
         String sku = "";
         int totalPrice = 0;
@@ -38,11 +39,13 @@ public class CheckoutSolution {
                 product = 1;
             }
             else {
-                product = Integer.parseInt(String.valueOf(skus.charAt(i)));
+                productletter += skus.charAt(i);
+                product = Integer.parseInt(productletter);
             }
         }
     }
 }
+
 
 
 
