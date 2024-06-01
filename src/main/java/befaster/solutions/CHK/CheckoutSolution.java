@@ -11,7 +11,13 @@ public class CheckoutSolution {
             if(!Character.isLetter(skus.charAt(i))) {
                 switch(skus.charAt(i)) {
                     case 'A':
-                        totalPrice += product * 50;
+                        if(product % 3 == 0)
+                        {
+                            totalPrice = totalPrice + 130;
+                        }
+                        else {
+                            totalPrice += product * 50;
+                        }
                         break;
                     case 'B':
                         totalPrice += product * 30;
@@ -26,11 +32,12 @@ public class CheckoutSolution {
                 product = 1;
             }
             else {
-                product = Integer.parseInt(skus.charAt(i));
+                product = Integer.parseInt(String.valueOf(skus.charAt(i)));
             }
         }
     }
 }
+
 
 
 
