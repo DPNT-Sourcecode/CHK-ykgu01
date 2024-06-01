@@ -38,7 +38,7 @@ public class CheckoutSolution {
                 counter[0] = counter[0] - 3;
             }
             else {
-                totalPrices[0] = counter[0] * 50;
+                totalPrices[0] += counter[0] * 50;
                 counter[0] = 0;
             }
         }
@@ -48,7 +48,7 @@ public class CheckoutSolution {
                 counter[1] = counter[1] - 2;
             }
             else {
-                totalPrices[1] = counter[1] * 30;
+                totalPrices[1] += counter[1] * 30;
                 counter[1] = 0;
             }
         }
@@ -61,4 +61,5 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
