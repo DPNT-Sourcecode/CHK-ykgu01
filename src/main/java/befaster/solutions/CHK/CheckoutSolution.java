@@ -5,14 +5,14 @@ import befaster.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
     public Integer checkout(String skus) {
         int totalPrice = 0;
-        int[] counter = {0, 0, 0, 0, 0};
-        int[] totalPrices = {0, 0, 0, 0, 0};
+        int[] counter = {0, 0, 0, 0, 0, 0};
+        int[] totalPrices = {0, 0, 0, 0, 0, 0};
         if(skus.isEmpty()) {
             return totalPrice;
         }
         else {
             for (int i = 0; i < skus.length(); i++) {
-                if (skus.charAt(i) == 'A' || skus.charAt(i) == 'B' || skus.charAt(i) == 'C' || skus.charAt(i) == 'D' || skus.charAt(i) == 'E') {
+                if (skus.charAt(i) == 'A' || skus.charAt(i) == 'B' || skus.charAt(i) == 'C' || skus.charAt(i) == 'D' || skus.charAt(i) == 'E' || skus.charAt(i) == 'F') {
                     switch (skus.charAt(i)) {
                         case 'A':
                             counter[0]++;
@@ -28,6 +28,9 @@ public class CheckoutSolution {
                             break;
                         case 'E':
                             counter[4]++;
+                            break;
+                        case 'F':
+                            counter[5]++;
                             break;
                     }
                 } else {
@@ -76,6 +79,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
