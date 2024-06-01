@@ -52,16 +52,16 @@ public class CheckoutSolution {
 
         while(counter[1] > 0){
             if (counter[4] >= 2) {
-                counter[1]--;
                 totalPrices[4] = totalPrices[4] + 80;
                 counter[4] = counter[4] - 2;
+                counter[1] = counter[1] - 1;
             }
             if(counter[1] >= 2){
                 totalPrices[1] = totalPrices[1] + 45;
                 counter[1] = counter[1] - 2;
             }
-            else {
-                totalPrices[1] += counter[1] * 30;
+            else if(counter[1] == 1){
+                totalPrices[1] += 30;
                 counter[1] = 0;
             }
         }
@@ -75,6 +75,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
