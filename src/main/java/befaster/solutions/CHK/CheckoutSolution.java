@@ -72,6 +72,16 @@ public class CheckoutSolution {
         totalPrices[4] = totalPrices[4] + counter[4] * 40;
         totalPrices[2] = counter[2] * 20;
         totalPrices[3] = counter[3] * 15;
+        while(counter[5] > 0) {
+            if(counter[5] >= 3){
+                totalPrices[5] = totalPrices[5] + 20;
+                counter[5] = counter[5] - 3;
+            }
+            else {
+                totalPrices[5] += counter[5] * 10;
+                counter[5] = 0;
+            }
+        }
         for(int j = 0; j<5; j++)
         {
             totalPrice = totalPrice + totalPrices[j];
@@ -79,6 +89,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
