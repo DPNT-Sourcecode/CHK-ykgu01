@@ -9,9 +9,6 @@ public class CheckoutSolution {
         String sku = "";
         int totalPrice = 0;
         for(int i = 0; i<skus.length(); i++) {
-            if(skus.charAt(i) != 'A' || skus.charAt(i) != 'B' || skus.charAt(i) != 'C' || skus.charAt(i) != 'D' || Character.isDigit(skus.charAt(i))) {
-                return -1;
-            }
             if(Character.isLetter(skus.charAt(i))) {
                 switch(skus.charAt(i)) {
                     case 'A':
@@ -46,10 +43,14 @@ public class CheckoutSolution {
                 productletter += skus.charAt(i);
                 product = Integer.parseInt(productletter);
             }
+            if(skus.charAt(i) != 'A' || skus.charAt(i) != 'B' || skus.charAt(i) != 'C' || skus.charAt(i) != 'D' || Character.isDigit(skus.charAt(i))) {
+                return -1;
+            }
         }
         return totalPrice;
     }
 }
+
 
 
 
