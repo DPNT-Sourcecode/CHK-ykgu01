@@ -219,10 +219,10 @@ public class CheckoutSolution {
         totalPrices[18] = counter[18] * 30; // S
         totalPrices[19] = counter[19] * 20; // T
         while(counter[20] > 0){
-            if(counter[20] >= 3)
+            if(counter[20] > 3)
             {
-                totalPrices[20] += 80;
-                counter[20] -= 3;
+                totalPrices[20] += 120;
+                counter[20] -= 4;
             }
             else {
                 totalPrices[20] += counter[20] * 40;
@@ -256,5 +256,6 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
