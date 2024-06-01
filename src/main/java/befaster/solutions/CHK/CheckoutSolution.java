@@ -35,14 +35,16 @@ public class CheckoutSolution {
                 return -1;
             }
         }
-        while(counter[0] == 0){
+        while(counter[0] != 0){
         if(counter[0] > 3) {
             totalPrices[0] = totalPrices[0] + 130 * (counter[0] / 3);
             counter[0] = counter[0] - 3;
         }
         else {
             totalPrices[0] = counter[0] * 50;
-        }}
+            counter[0]--;
+        }
+        }
         if(counter[1] % 2 == 0){
             totalPrices[1] = totalPrices[1] + 45 * (counter[1] / 2);
         }
@@ -58,6 +60,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
