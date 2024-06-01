@@ -37,19 +37,23 @@ public class CheckoutSolution {
         }
         while(counter[0] != 0){
         if(counter[0] > 3) {
-            totalPrices[0] = totalPrices[0] + 130 * (counter[0] / 3);
+            totalPrices[0] = totalPrices[0] + 130;
             counter[0] = counter[0] - 3;
         }
         else {
             totalPrices[0] = counter[0] * 50;
-            counter[0]--;
+            counter[0] = 0;
         }
         }
-        if(counter[1] % 2 == 0){
-            totalPrices[1] = totalPrices[1] + 45 * (counter[1] / 2);
-        }
-        else {
-            totalPrices[1] = counter[1] * 30;
+        while(counter[1] != 0){
+            if(counter[1] > 2){
+                totalPrices[1] = totalPrices[1] + 45;
+                counter[1] = counter[1] - 2;
+            }
+            else {
+                totalPrices[1] = counter[1] * 30;
+                counter[1] = 0;
+            }
         }
         totalPrices[2] = counter[2] * 20;
         totalPrices[3] = counter[3] * 15;
@@ -60,6 +64,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
