@@ -55,7 +55,7 @@ public class CheckoutSolution {
             {
                 totalPrices[4] += counter[4]/2 * 80;
                 counter[1] = counter[1] - counter[4]/2;
-                counter[4] = counter[4]/2;
+                counter[4] = counter[4]%2;
             }
             else {
                 totalPrices[4] += 40;
@@ -80,3 +80,4 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
