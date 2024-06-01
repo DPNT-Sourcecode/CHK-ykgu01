@@ -13,14 +13,20 @@ public class CheckoutSolution {
                     case 'A':
                         if(product % 3 == 0)
                         {
-                            totalPrice = totalPrice + 130;
+                            totalPrice = totalPrice + 130*(product/3);
                         }
                         else {
                             totalPrice += product * 50;
                         }
                         break;
                     case 'B':
-                        totalPrice += product * 30;
+                        if(product % 2 == 0)
+                        {
+                            totalPrice = totalPrice + 45*(product/2);
+                        }
+                        else {
+                            totalPrice += product * 30;
+                        }
                         break;
                     case 'C':
                         totalPrice += product * 20;
@@ -37,6 +43,7 @@ public class CheckoutSolution {
         }
     }
 }
+
 
 
 
