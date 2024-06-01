@@ -184,7 +184,7 @@ public class CheckoutSolution {
             counter[12] = 0;
 
         }
-        totalPrices[13] = counter[13] * 40;
+        totalPrices[13] += counter[13] * 40; // N
         totalPrices[14] = counter[14] * 10; // O
         while(counter[15] > 0)
         {
@@ -256,6 +256,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
