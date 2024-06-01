@@ -5,14 +5,14 @@ import befaster.runner.SolutionNotImplementedException;
 public class CheckoutSolution {
     public Integer checkout(String skus) {
         int totalPrice = 0;
-        int[] counter = {0, 0, 0, 0};
-        int[] totalPrices = {0, 0, 0, 0};
+        int[] counter = {0, 0, 0, 0, 0};
+        int[] totalPrices = {0, 0, 0, 0, 0};
         if(skus.isEmpty()) {
             return totalPrice;
         }
         else {
             for (int i = 0; i < skus.length(); i++) {
-                if (skus.charAt(i) == 'A' || skus.charAt(i) == 'B' || skus.charAt(i) == 'C' || skus.charAt(i) == 'D') {
+                if (skus.charAt(i) == 'A' || skus.charAt(i) == 'B' || skus.charAt(i) == 'C' || skus.charAt(i) == 'D' || skus.charAt(i) == 'E') {
                     switch (skus.charAt(i)) {
                         case 'A':
                             counter[0]++;
@@ -26,6 +26,9 @@ public class CheckoutSolution {
                         case 'D':
                             counter[3]++;
                             break;
+                        case 'E':
+                            counter[4]++;
+                            break;
                     }
                 } else {
                     return -1;
@@ -33,7 +36,11 @@ public class CheckoutSolution {
             }
         }
         while(counter[0] > 0){
-            if(counter[0] >= 3) {
+            if(counter[0] >= 5){
+                totalPrices[0] = totalPrices[0] + 200;
+                counter[0] = counter[0] - 5;
+            }
+            else if(counter[0] >= 3) {
                 totalPrices[0] = totalPrices[0] + 130;
                 counter[0] = counter[0] - 3;
             }
@@ -61,5 +68,6 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
