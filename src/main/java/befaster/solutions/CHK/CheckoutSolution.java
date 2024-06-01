@@ -197,14 +197,14 @@ public class CheckoutSolution {
                 counter[15] = 0;
             }
         }
-        while(counter[16] > 0){
-            while(counter[17] >= 3)
+        while(counter[16] > 0){ // daca avem mai mult de 1 Q
+            while(counter[17] >= 3) // daca sunt cel putin 3 R-uri
             {
-                totalPrices[17] = totalPrices[17] + 150;
-                counter[17] = counter[17] - 3;
-                counter[16] = counter[16] - 1;
+                totalPrices[17] = totalPrices[17] + 150; // creste pretul la R cu 150
+                counter[17] = counter[17] - 3; // scad 3 R uri
+                counter[16] = counter[16] - 1; // scad 1 Q gratis
             }
-            if(counter[16] >= 3) {
+            if(counter[16] >= 3) { // daca sunt mai mult de 3 Q uri
                 totalPrices[16] += 80;
                 counter[16] -=3;
             }
@@ -213,7 +213,7 @@ public class CheckoutSolution {
                 counter[16] = 0;
             }
         }
-        totalPrices[17] = counter[17] * 50; // R (edit)
+        totalPrices[17] += counter[17] * 50; // R (edit)
 
 
         totalPrices[18] = counter[18] * 30; // S
@@ -256,6 +256,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
