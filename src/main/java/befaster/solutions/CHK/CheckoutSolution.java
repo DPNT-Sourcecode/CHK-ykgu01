@@ -29,9 +29,6 @@ public class CheckoutSolution {
         }
         else if(skus.length() > 1){
         for (int i = 0; i < skus.length(); i++) {
-            if (skus.charAt(i) != 'A' || skus.charAt(i) != 'B' || skus.charAt(i) != 'C' || skus.charAt(i) != 'D' || !Character.isDigit(skus.charAt(i))) {
-                return -1;
-            }
             if (Character.isLetter(skus.charAt(i))) {
                 switch (skus.charAt(i)) {
                     case 'A':
@@ -69,6 +66,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
