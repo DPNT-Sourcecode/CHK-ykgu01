@@ -43,11 +43,12 @@ public class CheckoutSolution {
                 productletter += skus.charAt(i);
                 product = Integer.parseInt(productletter);
             }
-            else {
+            else{
                 return -1;
             }
         }
         return totalPrice;
     }
 }
+
 
