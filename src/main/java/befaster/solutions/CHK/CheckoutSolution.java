@@ -143,12 +143,61 @@ public class CheckoutSolution {
                 counter[5] = 0;
             }
         }
-        for(int j = 0; j<6; j++)
+        totalPrices[6] += counter[6] * 20; // G
+        while(counter[7] > 0) {
+            if(counter[7] >= 10)
+            {
+                totalPrices[7] = totalPrices[7] + 80;
+                counter[7] = counter[7] - 10;
+            }
+            else if(counter[7] >= 5){
+                totalPrices[7] = totalPrices[7] + 45;
+                counter[7] = counter[7] - 5;
+            }
+            else {
+                totalPrices[7] += counter[7] * 10;
+                counter[7] = 0;
+            }
+        }
+        totalPrices[8] = counter[8] * 35; // I
+        totalPrices[9] = counter[9] * 60; // J
+        while(counter[10] > 0){
+            if(counter[10] >= 2){
+                totalPrices[10] += 150;
+                counter[10] -= 2;
+            }
+            else {
+                totalPrices[10] += counter[10] * 80;
+                counter[10] = 0;
+            }
+        }
+        totalPrices[11] = counter[11] * 90; // L
+        totalPrices[12] = counter[12] * 15; // M
+        totalPrices[13] = counter[13] * 40; // N (edit)
+        while(counter[12] > 0){
+            while(counter[13] > )
+
+        }
+        totalPrices[14] = counter[14] * 10; // O
+        totalPrices[15] = counter[15] * 50; // P (edit)
+        totalPrices[16] = counter[16] * 30; // Q (edit)
+        totalPrices[17] = counter[17] * 50; // R
+        totalPrices[18] = counter[18] * 30; // S
+        totalPrices[19] = counter[19] * 20; // T
+        totalPrices[20] = counter[20] * 40; // U (edit)
+        totalPrices[21] = counter[21] * 50; // V (edit)
+        totalPrices[22] = counter[22] * 20; // W
+        totalPrices[23] = counter[23] * 90; // X
+        totalPrices[24] = counter[24] * 10; // Y
+        totalPrices[25] = counter[25] * 50; // Z
+
+        for(int j = 0; j<26; j++)
         {
             totalPrice = totalPrice + totalPrices[j];
         }
         return totalPrice;
     }
 }
+
 
 
