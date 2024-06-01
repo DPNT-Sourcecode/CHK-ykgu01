@@ -24,7 +24,7 @@ public class CheckoutSolution {
                     break;
             }
         }
-        else if (skus.length() == 0)
+        else if (skus.isEmpty())
         {
             return totalPrice;
         }
@@ -70,6 +70,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
