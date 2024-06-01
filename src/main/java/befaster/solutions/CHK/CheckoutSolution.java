@@ -13,16 +13,25 @@ public class CheckoutSolution {
                     case 'A':
                         totalPrice += product * 50;
                         break;
-                        case 'B':
-                            totalPrice += product * 30;
+                    case 'B':
+                        totalPrice += product * 30;
+                        break;
+                    case 'C':
+                        totalPrice += product * 20;
+                        break;
+                    case 'D':
+                        totalPrice += product * 15;
+                        break;
                 }
+                product = 1;
             }
             else {
-
+                product = Integer.parseInt(skus.charAt(i));
             }
         }
     }
 }
+
 
 
 
