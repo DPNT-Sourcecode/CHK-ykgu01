@@ -12,7 +12,7 @@ public class CheckoutSolution {
         }
         else {
             for (int i = 0; i < skus.length(); i++) {
-                if (skus.charAt(i) >) {
+                if (skus.charAt(i) >= 'A' && skus.charAt(i) <= 'Z') {
                     switch (skus.charAt(i)) {
                         case 'A':
                             counter[0]++;
@@ -32,6 +32,10 @@ public class CheckoutSolution {
                         case 'F':
                             counter[5]++;
                             break;
+                        case 'G':
+                            counter[6]++;
+                            break;
+                        case 'H':
                     }
                 } else {
                     return -1;
@@ -89,3 +93,4 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
