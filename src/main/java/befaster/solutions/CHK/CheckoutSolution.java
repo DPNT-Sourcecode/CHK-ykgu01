@@ -172,20 +172,81 @@ public class CheckoutSolution {
             }
         }
         totalPrices[11] = counter[11] * 90; // L
-        totalPrices[12] = counter[12] * 15; // M
-        totalPrices[13] = counter[13] * 40; // N (edit)
+
         while(counter[12] > 0){
-            while(counter[13] > )
+            while(counter[13] >= 3)
+            {
+                totalPrices[13] += 120;
+                counter[13] -= 3;
+                counter[12] -= 1;
+            }
+            totalPrices[12] += counter[12] * 15;
+            counter[12] = 0;
 
         }
+        totalPrices[13] = counter[13] * 40;
         totalPrices[14] = counter[14] * 10; // O
-        totalPrices[15] = counter[15] * 50; // P (edit)
+        while(counter[15] > 0)
+        {
+            if(counter[15] >= 5){
+                totalPrices[15] += 200;
+                counter[15] -= 5;
+            }
+            else {
+                totalPrices[15] += counter[15] * 50;
+                counter[15] = 0;
+            }
+        }
         totalPrices[16] = counter[16] * 30; // Q (edit)
-        totalPrices[17] = counter[17] * 50; // R
+        while(counter[16] > 0){
+            while(counter[17] >= 3)
+            {
+                totalPrices[17] = totalPrices[17] + 150;
+                counter[17] = counter[17] - 3;
+                counter[16] = counter[16] - 1;
+            }
+            if(counter[16] >= 3) {
+                totalPrices[16] += 80;
+                counter[16] -=3;
+            }
+            else {
+                totalPrices[16] += counter[16] * 30;
+                counter[16] = 0;
+            }
+        }
+        totalPrices[17] = counter[17] * 50; // R (edit)
+
+
         totalPrices[18] = counter[18] * 30; // S
         totalPrices[19] = counter[19] * 20; // T
         totalPrices[20] = counter[20] * 40; // U (edit)
+        while(counter[20] > 0){
+            if(counter[20] >= 3)
+            {
+                totalPrices[20] += 80;
+                counter[20] -= 3;
+            }
+            else {
+                totalPrices[20] += counter[20] * 40;
+                counter[20] = 0;
+            }
+        }
         totalPrices[21] = counter[21] * 50; // V (edit)
+        while(counter[21] > 0)
+        {
+            if(counter[21] >= 3){
+                totalPrices[21] += 130;
+                counter[21] -= 3;
+            }
+            else if(counter[21] == 2){
+                totalPrices[21] += 90;
+                counter[21] -=2;
+            }
+            else {
+                totalPrices[21] += 50;
+                counter[21] = 0;
+            }
+        }
         totalPrices[22] = counter[22] * 20; // W
         totalPrices[23] = counter[23] * 90; // X
         totalPrices[24] = counter[24] * 10; // Y
@@ -198,3 +259,4 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
