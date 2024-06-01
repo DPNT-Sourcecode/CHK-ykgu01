@@ -8,7 +8,7 @@ public class CheckoutSolution {
         int product = 1;
         String sku = "";
         int totalPrice = 0;
-        if (skus.length() == 1 && (skus.charAt(0) != 'A' || skus.charAt(0) != 'B' || skus.charAt(0) != 'C' || skus.charAt(0) != 'D') ) {
+        if (skus.length() == 1 && (skus.charAt(0) == 'A' || skus.charAt(0) == 'B' || skus.charAt(0) == 'C' || skus.charAt(0) == 'D') ) {
             switch (skus.charAt(0)) {
                 case 'A':
                     totalPrice = 50;
@@ -26,7 +26,7 @@ public class CheckoutSolution {
         }
         else if (skus.length() == 0)
         {
-            totalPrice = 0;
+            return totalPrice;
         }
         else if(skus.length() > 1){
         for (int i = 0; i < skus.length(); i++) {
@@ -70,6 +70,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
