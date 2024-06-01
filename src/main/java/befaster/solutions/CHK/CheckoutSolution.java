@@ -6,7 +6,6 @@ public class CheckoutSolution {
     public Integer checkout(String skus) {
         String productletter = "";
         int product = 1;
-        String sku = "";
         int totalPrice = 0;
         if (skus.length() == 1 && (skus.charAt(0) == 'A' || skus.charAt(0) == 'B' || skus.charAt(0) == 'C' || skus.charAt(0) == 'D') ) {
             switch (skus.charAt(0)) {
@@ -70,6 +69,7 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
+
 
 
 
