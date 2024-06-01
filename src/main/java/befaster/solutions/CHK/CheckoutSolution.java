@@ -82,13 +82,14 @@ public class CheckoutSolution {
                 counter[5] = 0;
             }
         }
-        for(int j = 0; j<5; j++)
+        for(int j = 0; j<6; j++)
         {
             totalPrice = totalPrice + totalPrices[j];
         }
         return totalPrice;
     }
 }
+
 
 
 
