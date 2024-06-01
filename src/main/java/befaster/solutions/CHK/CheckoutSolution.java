@@ -29,6 +29,9 @@ public class CheckoutSolution {
         }
         else if(skus.length() > 1){
         for (int i = 0; i < skus.length(); i++) {
+            if(Character.isLowerCase(skus.charAt(i))){
+                return -1;
+            }
             if (Character.isLetter(skus.charAt(i))) {
                 switch (skus.charAt(i)) {
                     case 'A':
@@ -66,12 +69,3 @@ public class CheckoutSolution {
         return totalPrice;
     }
 }
-
-
-
-
-
-
-
-
-
