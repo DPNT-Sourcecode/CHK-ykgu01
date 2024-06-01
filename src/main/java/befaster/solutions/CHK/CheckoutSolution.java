@@ -9,6 +9,11 @@ public class CheckoutSolution {
         int[] totalPrices = new int[4];
         for(int i = 0; i<skus.length(); i++)
         {
+            if(skus.isEmpty())
+            {
+                totalPrice = 0;
+                break;
+            }
             if(skus.charAt(i)== 'A' || skus.charAt(i) == 'B' || skus.charAt(i) == 'C' || skus.charAt(i) == 'D')
             {
                 switch (skus.charAt(i)) {
@@ -40,11 +45,18 @@ public class CheckoutSolution {
             totalPrices[1] = totalPrices[1] + 45 * (counter[1] / 2);
         }
         else {
-            totalPrices[1] = counter[1] * 50;
+            totalPrices[1] = counter[1] * 30;
         }
-
+        totalPrices[2] = counter[2] * 20;
+        totalPrices[3] = counter[3] * 15;
+        for(int j = 0; j<4; j++)
+        {
+            totalPrice = totalPrice + totalPrices[j];
+        }
+        return totalPrice;
     }
 }
+
 
 
 
